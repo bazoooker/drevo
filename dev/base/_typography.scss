@@ -11,9 +11,10 @@ body {
 }
 
 h1,h2,h3,h4,h5 {
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: $color-black;
+    margin: 0 0 30px 0;
 }
 
 
@@ -64,18 +65,26 @@ a:visited {
 }
 
 .text-big {
-    font-size: 2.5rem;
+    @include font-kit(28px,25px,22px,19px,18px);
     @include line-height-kit(1.4, 1.45, 1.5, 1.55, 1.65);
 }
-.text-brutal {
-    font-size: 2rem;
-    font-family: 'Russo One', sans-serif;
-}
+// .text-brutal {
+//     font-size: 2rem;
+//     font-family: 'Russo One', sans-serif;
+// }
 
 .text-center {text-align: center !important;}
 .text-uppercase {text-transform: uppercase !important;}
 .text-white {color: #fff !important;}
-.text-accent { color: $color_main !important; }
+.text-accent { color: $color-main !important; }
+.text-thin { font-weight: 300 !important; }
+.text-small { 
+    font-size: 12px;
+    line-height: 1.3;
+}
+.not-important { 
+    opacity: .75;
+}
 
 
 

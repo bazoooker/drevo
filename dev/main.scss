@@ -2,7 +2,7 @@
 // initial
 @import "base/var-mixin";
 @import "base/normalize";
-// @import "base/typography";
+@import "base/typography";
 
 // libs
 @import "libs/bootstrap-grid/bootstrap-grid.min";
@@ -19,6 +19,166 @@
 
 
 
+
+
+
+
+
+
+
+.btn,
+.btn:visited,
+.btn:active {
+	display: inline-block;
+	border-radius: 40px;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {text-decoration: none;}
+}
+.btn-main,
+.btn-main:visited,
+.btn-main:active {
+	background-color: $color-main;
+	color: #fff;
+	outline: 0 !important;
+	border: 0 !important
+}
+.btn-white,
+.btn-white:visited,
+.btn-white:active {
+	background-color: #fff;
+	color: $color-main;
+	outline: 0 !important;
+	border: 0 !important
+}
+.btn-sm,
+.btn-sm:visited,
+.btn-sm:active, {
+	padding: 10px 20px;
+	@font-kit(19px,18px,17px,16px,15px);
+}
+.btn-md,
+.btn-md:visited,
+.btn-md:active, {
+	padding: 15px 30px;
+	@font-kit(20px,19px,18px,17px,16px);
+}
+.btn-lg,
+.btn-lg:visited,
+.btn-lg:active, {
+	padding: 20px 40px;
+	@font-kit(21px,20px,19px,18px,17px);
+}
+
+
+
+
+
+
+
+.mark {
+	display: inline-block;
+	padding: 8px;
+	color: #fff;
+	margin: 0 0 8px 0;
+}
+.mark-green {
+	background-color: $color-main;
+}
+.mark-purple {
+	background-color: $color-secondary;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
+	@include flex-row(nowrap,center,center);
+	height: 100px;
+	background-color: #fff;
+	box-shadow: 0 0 35px 0 rgba(0,0,0,.1);
+	.container {
+		// @include flex-row(nowrap,space-between,center);
+	}
+	.logo {
+		width: 115px;
+		height: 65px;
+	}
+}
+.header-info {
+}
+.header-phone {
+	color: $color-black !important;
+	font-weight: 600;
+	height: 100%;
+	@include flex-row(nowrap,center,center);
+	font-size: 22px;
+}
+.header-button {
+	height: 100%;
+	@include flex-row(nowrap,flex-end,center);
+}
+
+
+
+
+
+
+
+
+
+
+
+.logo {
+	display: inline-block;
+	@include bg-contain;
+}
+.logo-white {
+	background-image: url(/img/logo-white.jpg);
+}
+.logo-black {
+	background-image: url(/img/logo-black.png);
+}
+
+
+
+
+
+
+
+
+
+.hero {
+	position: relative;
+	height: 85vh;
+	@include bg-cover;
+	@include flex-row(nowrap,center,center);
+	h2 {
+		line-height: 1;
+	}
+	h1,h2 {
+		margin-left: 30%;
+	}
+}
+.hero-badge {
+	position: absolute;
+	bottom: -20px;
+	left: 57%;
+	background-color: $color-secondary;
+	width: 310px;
+	height: 310px;
+	border-radius: 50%;
+}
 
 
 
